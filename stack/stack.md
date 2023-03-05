@@ -118,6 +118,8 @@ func NewIntStack(cap int) (*intStack, error) {
 
 通过代码可以看出,不管是顺序栈还是链式栈,Pop与Push操作仅在栈顶进行操作,时间复杂度皆为O(1).
 
+[Go语言示例代码](stack.go)
+
 ## 栈的使用
 
 栈最多使用在如下的场景中:
