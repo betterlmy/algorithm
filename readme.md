@@ -14,43 +14,36 @@
 
 ![img](readme.assets/913e0ababe43a2d57267df5c5f0832a7.jpg)
 
-## 算法复杂度
+## 复杂度分析
 
-[基础知识](complexity/complexity.md)		2023-03-05
-
-------
-
-
-
-## 数组Array
-
-[基础知识](array/array.md)		2023-03-05
-
-
+[基础知识](complexity/complexity.md)  2023-03-05
 
 ------
 
-
-
-## 链表Linked List
-
-[基础知识](linkedlist/linkedlist.md)		2023-03-05
-
-
+## 线性表
 
 ------
 
-## 栈Stack
+### 数组Array
 
-[基础知识](stack/stack.md)		2023-03-05
-
-[Go实现代码](stack/stack.go)	2023-03-05
-
-
+[基础知识](array/array.md)  2023-03-05
 
 ------
 
-## 队列Queue
+### 链表Linked List
 
-[基础知识](queue/queue.md)		2023-03-05
+[基础知识](linkedlist/linkedlist.md)  2023-03-05
 
+------
+
+### 栈Stack
+
+[基础知识](stack/stack.md)  2023-03-05
+
+[Go实现代码](stack/stack.go) 2023-03-05
+
+------
+
+### 队列Queue
+
+[基础知识](queue/queue.md)  2023-03-05
