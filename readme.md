@@ -16,7 +16,7 @@
 
 ## 算法复杂度
 
-[基础知识](complexity.md)		2023-03-05
+[基础知识](complexity/complexity.md)		2023-03-05
 
 ------
 
@@ -24,7 +24,7 @@
 
 ## 数组Array
 
-[基础知识](array.md)		2023-03-05
+[基础知识](array/array.md)		2023-03-05
 
 
 
@@ -34,7 +34,7 @@
 
 ## 链表Linked List
 
-[基础知识](linkedlist.md)		2023-03-05
+[基础知识](linkedlist/linkedlist.md)		2023-03-05
 
 
 
@@ -42,7 +42,7 @@
 
 ## 栈Stack
 
-[基础知识](stack.md)		2023-03-05
+[基础知识](stack/stack.md)		2023-03-05
 
 
 
@@ -50,5 +50,5 @@
 
 ## 队列Queue
 
-[基础知识](queue.md)		2023-03-05
+[基础知识](queue/queue.md)		2023-03-05
 
