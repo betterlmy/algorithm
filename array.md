@@ -18,6 +18,10 @@ x := [5]int{1,2,3,4,5}
 
 顾名思义,线性表就是数据排列成一条线一样的结构.数据只有向前向后两个方向,除了`数组`之外,`链表(Linked List)`,`队列(Queue)`,`栈(Stack)`等也是线性表结构.
 
+[链表](linkedlist.md)
+
+[栈](stach.md)
+
 ![img](array.assets/b6b71ec46935130dff5c4b62cf273477.jpg)
 
 与线性表相对立的概念是**非线性表**,例如`二叉树(Binary Tree)`,`堆(Heap)`,`图(Graph)`等.
