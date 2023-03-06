@@ -8,7 +8,7 @@
 >
 > 出队即将队列的头部元素取出并返回.
 
-![img](queue.assets/9eca53f9b557b1213c5d94b94e9dce3e.jpg)
+![img](readme.assets/9eca53f9b557b1213c5d94b94e9dce3e.jpg)
 
 队列的应用非常广泛，特别是一些具有某些额外特性的队列，比如`循环队列`、`阻塞队列`、`并发队列`。它们在很多偏底层系统、框架、中间件的开发中，起着关键性的作用。比如高性能队列 Disruptor、Linux 环形缓存，都用到了循环并发队列；Java concurrent 并发包利用 ArrayBlockingQueue 来实现公平锁等。
 
@@ -16,7 +16,7 @@
 
 与栈相同,队列都是抽象的数据结构,可以使用数组(顺序队列)实现,也可以使用链表(链式队列)来实现.
 
-![img](queue.assets/094ba7722eeec46ead58b40c097353c7.jpg)
+![img](readme.assets/094ba7722eeec46ead58b40c097353c7.jpg)
 
 ### java
 
@@ -122,11 +122,11 @@ func NewIntQueue(cap int) (*intQueue, error) {
 
 主要便是使用到了取模运算.
 
-![img](queue.assets/58ba37bb4102b87d66dffe7148b0f990.jpg)
+![img](readme.assets/58ba37bb4102b87d66dffe7148b0f990.jpg)
 
 在循环队列中**判断队空和队满**是关键所在.
 
-![img](queue.assets/3d81a44f8c42b3ceee55605f9aeedcec.jpg)
+![img](readme.assets/3d81a44f8c42b3ceee55605f9aeedcec.jpg)
 
 如图所示
 
@@ -138,7 +138,7 @@ func NewIntQueue(cap int) (*intQueue, error) {
 
 阻塞队列其实就是在队列的基础上加入了阻塞操作,即队列为空的时候,从队头取数据会被阻塞,因为没有数据可取,直到队列中有了数据才返回.如果队列已经满了,那么插入数据的操作会被阻塞,直到有数据被取出之后才可以插入.
 
-![img](queue.assets/5ef3326181907dea0964f612890185eb.jpg)
+![img](readme.assets/5ef3326181907dea0964f612890185eb.jpg)
 
 这种Producter-Consumer Model 可以有效地协调生产和消费速度.
 

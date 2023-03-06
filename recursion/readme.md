@@ -37,7 +37,7 @@ func climbStairs(n int) int {
 }
 ```
 
-[示例代码](../leetCode/lc70/one/main.go)
+[示例代码](climbStairs/one/main.go)
 
 在这个例子中满足三个条件,且递归终止条件是n==1或n==2.
 
@@ -77,7 +77,7 @@ func climbStairs(n int) int {
 }
 ```
 
-[示例代码](../leetCode/lc70/two/main.go)
+[示例代码](climbStairs/two/main.go)
 
 ## 递归代码改为非递归代码
 
