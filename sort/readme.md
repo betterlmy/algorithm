@@ -204,17 +204,19 @@ func SelectionSort(ints []int) []int {
 
 ## 归并排序
 
+二路归并排序
+
 ### 特性
 
-最好情况:$$O(n^2)$$
+最好情况:$$O(nlogn)$$
 
-最坏情况:$$O(n^2)$$
+最坏情况:$$O(nlogn)$$
 
-平均情况:$$O(n^2)$$
+平均情况:$$O(nlogn)$$
 
-空间复杂度:O(1),原地排序
+空间复杂度:O(n),非原地排序
 
-稳定性:**不稳定**,选择排序每次都要找剩余未排序元素中的最小值，并和前面的元素交换位置，这样破坏了稳定性。比如 5，8，5，2，9 这样一组数据，使用选择排序算法来排序的话，第一次找到最小元素 2，与第一个 5 交换位置，那第一个 5 和中间的 5 顺序就变了，所以就不稳定了。正是因此，相对于冒泡排序和插入排序，选择排序就稍微逊色了。
+稳定性:**稳定**,在merge阶段可以对相同值选择进行排序.
 
 ### 动图演示
 
@@ -222,36 +224,125 @@ func SelectionSort(ints []int) []int {
 
 ### 思想
 
+归并排序分为分解与合并两个过程.
+
+使用了**分治**的思想
+
+> 分治即将大问题分解为小问题,小问题解决了,大问题也就解决了.
+>
+> 分治思想与递归思想很像,一般分治算法都使用递归来实现.
+>
+> **分治是解决问题的思路,递归是编程技巧**
+
 
 
 ### 代码
 
 ```go
-func SelectionSort(ints []int) []int {
-	length := len(ints)
-	if length < 2 {
-		return ints
-	}
+func MergeSort(ints []int) {
+	sort(ints, 0, len(ints)-1)
+}
 
-	for i := 0; i < length; i++ {
-		// 遍历所有
-		minIndex := i
-		changed := false
-		for j := i + 1; j < length; j++ {
-			// 未排序的子集
-			if ints[minIndex] > ints[j] {
-				changed = true
-				minIndex = j
+func sort(ints []int, start int, end int) {
+	if start >= end {
+		return
+	}
+	mid := (end + start) / 2
+	fmt.Println("排序", start, "到", mid)
+	sort(ints, start, mid)
+	fmt.Println("排序", mid+1, "到", end)
+	sort(ints, mid+1, end)
+	merge(ints, start, mid, end)
+
+}
+
+func merge(ints []int, start int, mid int, end int) {
+	fmt.Printf("合并[%d:%d]与[%d:%d]到[%d,%d]\n", start, mid, mid+1, end, start, end)
+	tmp := make([]int, 0)
+out:
+	for i := start; i <= mid; {
+		for j := mid + 1; j <= end; {
+			if ints[i] > ints[j] {
+				tmp = append(tmp, ints[j])
+				j++
+				if j > end {
+					tmp = append(tmp, ints[i:mid+1]...)
+					break out
+				}
+			} else {
+				tmp = append(tmp, ints[i])
+				i++
+				if i > mid {
+					tmp = append(tmp, ints[j:end+1]...)
+					break out
+				}
 			}
 		}
-		if changed {
-			ints[i], ints[minIndex] = ints[minIndex], ints[i]
-		}
 	}
-	fmt.Println("选择排序结束")
-	return ints
+	i, j := start, 0
+	for i <= end {
+		ints[i] = tmp[j]
+		i++
+		j++
+	}
+
 }
 ```
 
-[代码文件](
+[代码文件](merge.go)
+
+## 快速排序
+
+### 特性
+
+最好情况:$$O(nlogn)$$
+
+最坏情况:$$O(n^2)$$,如果数组中的数据原来已经是有序的了，比如 1，3，5，6，8。如果我们每次选择最后一个元素作为 pivot，那每次分区得到的两个区间都是不均等的。我们需要进行大约 n 次分区操作，才能完成快排的整个过程。每次分区我们平均要扫描大约 n/2 个元素，这种情况下，快排的时间复杂度就从 O(nlogn) 退化成了 O(n2)。
+
+平均情况:$$O(n^2)$$
+
+空间复杂度:O(1),原地排序
+
+稳定性:**稳定**
+
+### 动图演示
+
+![img](readme.assets/849589-20171015230936371-1413523412-20230307111632241.gif)
+
+### 思想
+
+1. 从数列中挑出一个元素,成为基准(pivot)
+2. 重新排列数列,所有比基准小的元素和比基准大的元素分区排放,每次排列确定一个元素的位置,获得两个分区
+3. 在两个分区中分别重复步骤2
+
+### 代码
+
+```go
+func QuickSort(ints []int) []int {
+	if len(ints) < 2 {
+		return ints
+	}
+
+	pivot := ints[0]
+	less := make([]int, 0)
+	greater := make([]int, 0)
+	for _, v := range ints[1:] {
+		if v <= pivot {
+			less = append(less, v)
+		} else {
+			greater = append(greater, v)
+		}
+	}
+	less = QuickSort(less)
+	greater = QuickSort(greater)
+
+	return append(append(less, pivot), greater...)
+}
+```
+
+[代码文件](quick.go)
+
+从代码中可以看到 快排的处理是由上到下的,先作比较,再处理子问题(后迭代)
+
+而归并的处理是由下到上的,先处理子问题,再进行比较(先迭代)
 

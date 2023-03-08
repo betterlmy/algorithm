@@ -1,6 +1,6 @@
 # 算法
 
-~~Implement in GO language.~~
+Implement in GO language.
 
 基础知识,复习算法知识点.
 
@@ -24,19 +24,19 @@
 
 ------
 
-### 数组Array
+### 数组 Array
 
 [基础知识](array/readme.md)  2023-03-05
 
 ------
 
-### 链表Linked List
+### 链表 Linked List
 
 [基础知识](linkedlist/readme.md)  2023-03-05
 
 ------
 
-### 栈Stack
+### 栈 Stack
 
 [基础知识](stack/readme.md)  2023-03-05
 
@@ -44,7 +44,7 @@
 
 ------
 
-### 队列Queue
+### 队列 Queue
 
 [基础知识](queue/readme.md)  2023-03-05
 
@@ -52,7 +52,7 @@
 
 ------
 
-### 递归Recursion
+## 递归 Recursion
 
 [基础知识](recursion/readme.md)  2023-03-06
 
@@ -62,7 +62,7 @@
 
 ------
 
-### 排序Sort
+## 排序 Sort
 
 [基础知识](sort/readme.md)	2023-03-06
 
@@ -71,3 +71,44 @@
 [插入排序	](sort/readme.md#插入排序)2023-03-06
 
 [选择排序	](sort/readme.md#选择排序)2023-03-06
+
+[归并排序](sort/readme.md#归并排序)	2023-03-07
+
+[快速排序](sort/readme.md#快速排序)	2023-03-07
+
+所有排序已附代码
+
+------
+
+## 二分查找 Binary Search
+
+[基础知识(附代码)](search/readme.md/#二分查找)	2023-03-07
+
+
+
+------
+
+## 跳表 Skip List
+
+[基础知识](skipList/readme.md)	2023-03-07
+
+
+
+------
+
+## 贪心算法 Greedy Algorithm
+
+[基础知识](greedy/readme.md)	2023-03-08
+
+[leetcode455 分发饼干](greedy/readme.md#LeetCode真题)	2023-03-08
+
+
+
+------
+
+## 分治算法 Divide and Conquer Algorithm
+
+[基础知识](divideAndConquer/readme.md)	2023-03-08
+
+
+

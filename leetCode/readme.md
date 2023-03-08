@@ -69,3 +69,13 @@
 [JZ6 从尾到头打印链表](https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035?tpId=265&tags=&title=&difficulty=0&judgeStatus=0&rp=1&sourceUrl=%2Fexam%2Foj%2Fta%3FtpId%3D13)  
 
 [JZ7 重建二叉树](https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=265&tags=&title=&difficulty=0&judgeStatus=0&rp=1&sourceUrl=%2Fexam%2Foj%2Fta%3FtpId%3D13)  
+
+## 和为k的子数组
+
+[题目链接](https://leetcode.cn/problems/QTMn0o/https://leetcode.cn/problems/QTMn0o/)
+
+[代码](JZ010/one/main.go)
+
+考察
+
+数组  哈希表 前缀和
