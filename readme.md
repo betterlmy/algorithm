@@ -112,3 +112,21 @@ Implement in GO language.
 
 
 
+
+
+------
+
+## 回溯算法 Backtracking Algorithm
+
+[基础知识](backtracking/readme.md)	2023-03-08
+
+[0-1背包问题的回溯方法](backtracking/KnapsackProblem/KnapsackProblem.go)	2023-03-08
+
+
+
+------
+
+## 动态规划 Dynamic Programming
+
+[基础知识](dynamicProgramming/readme.md)	2023-03-08
+

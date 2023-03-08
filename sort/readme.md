@@ -226,7 +226,7 @@ func SelectionSort(ints []int) []int {
 
 归并排序分为分解与合并两个过程.
 
-使用了**分治**的思想
+使用了[分治](../divideAndConquer/readme.md)的思想
 
 > 分治即将大问题分解为小问题,小问题解决了,大问题也就解决了.
 >
