@@ -52,6 +52,42 @@ Implement in GO language.
 
 ------
 
+### 跳表 Skip List
+
+[基础知识](skipList/readme.md)	2023-03-07
+
+
+
+------
+
+### 散列表 Hash Table
+
+[基础知识](hash/readme.md)	2023-03-07
+
+## 非线性表
+
+------
+
+### 二叉树
+
+[基础知识](binaryTree/readme.md)	2023-03-08
+
+------
+
+### 红黑树
+
+[基础知识](RBTree/readme.md)	2023-03-08
+
+------
+
+### 递归树
+
+------
+
+### 堆
+
+------
+
 ## 递归 Recursion
 
 [基础知识](recursion/readme.md)  2023-03-06
@@ -76,21 +112,11 @@ Implement in GO language.
 
 [快速排序](sort/readme.md#快速排序)	2023-03-07
 
-所有排序已附代码
-
 ------
 
 ## 二分查找 Binary Search
 
 [基础知识(附代码)](search/readme.md/#二分查找)	2023-03-07
-
-
-
-------
-
-## 跳表 Skip List
-
-[基础知识](skipList/readme.md)	2023-03-07
 
 
 
